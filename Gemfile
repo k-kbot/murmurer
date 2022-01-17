@@ -28,6 +28,7 @@ group :development do
 end
 
 group :development do
+  gem "factory_bot_rails", '~> 4.11'
   gem 'rspec-rails', '~> 3.7'
 end
 
