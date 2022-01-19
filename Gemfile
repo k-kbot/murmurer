@@ -18,6 +18,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem "factory_bot_rails", '~> 4.11'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -25,11 +27,6 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.3'
   gem 'listen', '~> 3.3'
   gem 'spring'
-end
-
-group :development do
-  gem "factory_bot_rails", '~> 4.11'
-  gem 'rspec-rails', '~> 3.7'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
