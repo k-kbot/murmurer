@@ -18,7 +18,13 @@
 class User < ApplicationRecord
   has_secure_password
 
-  validates :name, :email, :password_digest, presence: true
+  MAXIMUM_NAME_LENGTH = 15
+  MAXIMUM_EMAIL_LENGTH = 255
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
+  validates :name, presence: true, length: { maximum: MAXIMUM_NAME_LENGTH }
+  validates :email, presence: true, length: { maximum: MAXIMUM_EMAIL_LENGTH }, format: { with: VALID_EMAIL_REGEX }
+  validates :password_digest, presence: true
 
   has_many :tweets, dependent: :destroy
 end
