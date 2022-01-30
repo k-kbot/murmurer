@@ -1,0 +1,7 @@
+<h1>Tweets#index</h1>
+
+<% @tweets.each do |tweet| %>
+  <p><%= tweet.user.name %></p>
+  <p><%= tweet.content %></p>
+  <hr>
+<% end %>
