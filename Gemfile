@@ -29,7 +29,7 @@ group :development do
   gem 'annotate'
   gem 'listen', '~> 3.3'
   gem 'pry-rails'
-  gem 'rack-mini-profiler', '~> 2.3'
+  gem 'rack-mini-profiler', '~> 2.3', require:false
   gem 'rubocop', '~> 1.25', require: false
   gem 'rubocop-rails', '~> 2.13', require: false
   gem 'spring'
